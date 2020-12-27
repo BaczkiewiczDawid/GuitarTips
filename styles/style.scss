@@ -14,6 +14,7 @@ body, html {
 .nav {
     display: flex;
     flex-direction: column;
+    max-width: 1300px;
 
     .nav__logo-container {
         display: flex;
@@ -72,6 +73,7 @@ body, html {
 .article {
     display: flex;
     flex-direction: column;
+    max-width: 1300px;
 
     .article__box {
         margin-left: 1rem;

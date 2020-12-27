@@ -17,6 +17,7 @@ body, html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 1300px;
 }
 
 .nav .nav__logo-container {
@@ -98,6 +99,7 @@ body, html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 1300px;
 }
 
 .article .article__box {
