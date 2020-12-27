@@ -31,7 +31,7 @@ body, html {
           align-items: center;
   -ms-flex-item-align: center;
       align-self: center;
-  width: 90%;
+  width: 95%;
   margin-top: .8rem;
 }
 
@@ -61,7 +61,7 @@ body, html {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  width: 90%;
+  width: 95%;
 }
 
 .nav .nav__container .nav__ul {
@@ -170,5 +170,63 @@ body, html {
 
 .article .article__box:nth-child(n+2) {
   margin-top: 5rem;
+}
+
+@media (min-width: 425px) {
+  .article .article__box .article__content .article__title {
+    font-size: 28px;
+  }
+  .article .article__box .article__content .article__paragraph {
+    font-size: 17px;
+  }
+  .article .article__box .article__author .article__photo {
+    width: 60px;
+    height: 60px;
+  }
+  .article .article__box .article__author .article__data .article__name {
+    font-size: 14px;
+  }
+  .article .article__box .article__author .article__data .article__read-time {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 550px) {
+  .nav .nav__logo-container .nav__logo {
+    font-size: 28px;
+  }
+  .nav .nav__logo-container .nav__login {
+    font-size: 18px;
+  }
+  .nav .nav__container .nav__ul .nav__item {
+    font-size: 16px;
+  }
+  .article .article__box {
+    margin-top: 3.5rem;
+  }
+  .article .article__box .article__last {
+    font-size: 18px;
+  }
+  .article .article__box .article__content .article__title {
+    font-size: 28px;
+  }
+  .article .article__box .article__content .article__paragraph {
+    margin-top: 2rem;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .article .article__box .article__author {
+    margin-top: 2rem;
+  }
+  .article .article__box .article__author .article__photo {
+    width: 60px;
+    height: 60px;
+  }
+  .article .article__box .article__author .article__data .article__name {
+    font-size: 16px;
+  }
+  .article .article__box .article__author .article__data .article__read-time {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
