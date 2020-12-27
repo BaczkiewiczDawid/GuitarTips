@@ -85,6 +85,11 @@ body, html {
   margin: 0 10px;
 }
 
+.nav .nav__container .nav__ul a {
+  text-decoration: none;
+  color: #292929;
+}
+
 .article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,21 +115,21 @@ body, html {
   margin-top: 1.5rem;
 }
 
-.article .article__box .article__content .article__image {
+.article .article__box .article__content .article__image-box .article__image {
   -o-object-fit: cover;
      object-fit: cover;
   width: 95%;
   height: auto;
 }
 
-.article .article__box .article__content .article__title {
+.article .article__box .article__content .article__content-box .article__title {
   color: #292929;
   margin-top: 1rem;
   font-size: 24px;
   width: 90%;
 }
 
-.article .article__box .article__content .article__paragraph {
+.article .article__box .article__content .article__content-box .article__paragraph {
   color: #292929;
   width: 90%;
   margin-top: 1rem;
@@ -133,7 +138,7 @@ body, html {
   font-size: 14px;
 }
 
-.article .article__box .article__author {
+.article .article__box .article__content .article__content-box .article__author {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,26 +149,26 @@ body, html {
   margin-top: 1.5rem;
 }
 
-.article .article__box .article__author .article__photo {
+.article .article__box .article__content .article__content-box .article__author .article__photo {
   width: 50px;
   height: 50px;
   background-color: #02B875;
   border-radius: 100px;
 }
 
-.article .article__box .article__author .article__data {
+.article .article__box .article__content .article__content-box .article__author .article__data {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   margin-left: 1.3rem;
 }
 
-.article .article__box .article__author .article__data .article__name {
+.article .article__box .article__content .article__content-box .article__author .article__data .article__name {
   font-size: 12px;
   color: #02B875;
 }
 
-.article .article__box .article__author .article__data .article__read-time {
+.article .article__box .article__content .article__content-box .article__author .article__data .article__read-time {
   font-size: 12px;
   color: #292929;
 }
@@ -227,6 +232,49 @@ body, html {
   }
   .article .article__box .article__author .article__data .article__read-time {
     font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav .nav__container {
+    margin-top: 1rem;
+  }
+  .article .article__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .article .article__box .article__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .article .article__box .article__content .article__image-box .article__image {
+    width: 45vw;
+    height: 250px;
+  }
+  .article .article__box .article__content .article__content-box {
+    margin-left: 1rem;
+  }
+  .article .article__box .article__content .article__content-box .article__title {
+    font-size: 22px;
+    width: 50vw;
+  }
+  .article .article__box .article__content .article__content-box .article__paragraph {
+    margin-top: 1.4rem;
+    font-size: 18px;
+    width: 50vw;
+  }
+  .article .article__box .article__content .article__content-box .article__author {
+    margin-top: 1.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

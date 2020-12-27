@@ -60,6 +60,11 @@ body, html {
             .nav__item:nth-child(n+2) {
                 margin: 0 10px;
             }
+
+            a {
+                text-decoration: none;
+                color: $text-color;
+            }
         }
     }
 }
@@ -81,53 +86,57 @@ body, html {
         .article__content {
             margin-top: 1.5rem;
 
-            .article__image {
-                object-fit: cover;
-                width: 95%;
-                height: auto;
+            .article__image-box {
+                .article__image {
+                    object-fit: cover;
+                    width: 95%;
+                    height: auto;
+                }
             }
 
-            .article__title {
-                color: $text-color;
-                margin-top: 1rem;
-                font-size: 24px;
-                width: 90%;
-            }
-
-            .article__paragraph {
-                color: $text-color;
-                width: 90%;
-                margin-top: 1rem;
-                font-weight: 300;
-                letter-spacing: 0.3px;
-                font-size: 14px;
-            }
-        }
-
-        .article__author {
-            display: flex;
-            flex-direction: row;
-            margin-top: 1.5rem;
-
-            .article__photo {
-                width: 50px;
-                height: 50px;
-                background-color: $light-green;
-                border-radius: 100px;
-            }
-
-            .article__data {
-                align-self: center;
-                margin-left: 1.3rem;
-
-                .article__name {
-                    font-size: 12px;
-                    color: $light-green;
+            .article__content-box {
+                .article__title {
+                    color: $text-color;
+                    margin-top: 1rem;
+                    font-size: 24px;
+                    width: 90%;
+                }
+    
+                .article__paragraph {
+                    color: $text-color;
+                    width: 90%;
+                    margin-top: 1rem;
+                    font-weight: 300;
+                    letter-spacing: 0.3px;
+                    font-size: 14px;
                 }
 
-                .article__read-time {
-                    font-size: 12px;
-                    color: $text-color;
+                .article__author {
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 1.5rem;
+        
+                    .article__photo {
+                        width: 50px;
+                        height: 50px;
+                        background-color: $light-green;
+                        border-radius: 100px;
+                    }
+        
+                    .article__data {
+                        align-self: center;
+                        margin-left: 1.3rem;
+        
+                        .article__name {
+                            font-size: 12px;
+                            color: $light-green;
+                        }
+        
+                        .article__read-time {
+                            font-size: 12px;
+                            color: $text-color;
+                        }
+                    }
                 }
             }
         }
@@ -231,5 +240,50 @@ body, html {
             }
         }
     }
+}
 
+@media (min-width: 768px) {
+    .nav {
+        .nav__container {
+            margin-top: 1rem;
+        }
+    }
+
+    .article {
+        .article__box {
+            display: flex;
+            flex-direction: column;
+
+            .article__content {
+                display: flex;
+                flex-direction: row;
+
+                .article__image-box {
+                    .article__image {
+                        width: 45vw;
+                        height: 250px;
+                    }
+                }
+
+                .article__content-box {
+                    margin-left: 1rem;
+                    
+                    .article__title {
+                        font-size: 22px;
+                        width: 50vw;
+                    }
+
+                    .article__paragraph {
+                        margin-top: 1.4rem;
+                        font-size: 18px;
+                        width: 50vw;
+                    }
+
+                    .article__author {
+                        margin-top: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
 }
