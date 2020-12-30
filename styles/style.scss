@@ -73,6 +73,7 @@ body, html {
 .article {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 
     .article__box {
         margin-left: 1rem;
@@ -148,32 +149,70 @@ body, html {
     }
 }
 
-@media (min-width: 425px) {
-    .article {
-        .article__box {
-            .article__content {
-                .article__title {
-                    font-size: 28px;
-                }
+.section {
+    display: flex;
+    flex-direction: column;
 
-                .article__paragraph {
-                    font-size: 17px;
+    .section__box {
+        margin-top: 6rem;
+        margin-left: 1rem;
+
+        .section__content {
+            display: flex;
+            flex-direction: column;
+
+            .section__image-box {
+                .section__image {
+                    width: 95%;
+                    height: auto;
                 }
             }
 
-            .article__author {
-                .article__photo {
-                    width: 60px;
-                    height: 60px;
+            .section__content-box {
+                margin: 0;
+
+                .section__title {
+                    color: $text-color;
+                    margin-top: 1rem;
+                    font-size: 24px;
+                    width: 90%;
                 }
 
-                .article__data {
-                    .article__name {
-                        font-size: 14px;
+                .section__paragraph {
+                    color: $text-color;
+                    width: 90%;
+                    margin-top: 1rem;
+                    font-weight: 300;
+                    letter-spacing: 0.3px;
+                    font-size: 14px;
+                }
+
+                .section__author {
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 1.5rem;
+
+                    .section__photo {
+                        width: 50px;
+                        height: 50px;
+                        background-color: $light-green;
+                        border-radius: 100px;
                     }
 
-                    .article__read-time {
-                        font-size: 14px;
+                    .section__data {
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 1rem;
+
+                        .section__name {
+                            font-size: 12px;
+                            color: $light-green;
+                        }
+
+                        .section__read-time {
+                            font-size: 12px;
+                            color: $text-color;
+                        }
                     }
                 }
             }
@@ -286,61 +325,65 @@ body, html {
                 }
             }
         }
+    }
 
-        .article__list {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 90vw;
+    .section {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
 
-            .article__content {
+        .section__box {
+            margin-top: 6rem;
+            margin-left: 1rem;
+            width: 45vw;
+
+            .section__content {
                 display: flex;
                 flex-direction: column;
-                margin-top: 7rem;
-                margin-left: 1rem;
 
-                .article__image-box {
-                    .article__image {
-                        width: 40vw;
+                .section__image-box {
+                    .section__image {
+                        width: 90%;
                         height: auto;
                     }
                 }
 
-                .article__content-box {
-                    
-                    .article__title {
-                        width: 38vw;
+                .section__content-box {
+                    margin: 0;
+
+                    .section__title {
+                        font-size: 18px;
+                        width: 90%;
+                        margin-top: .5rem;
                     }
 
-                    .article__paragraph {
-                        width: 38vw;
+                    .section__paragraph {
+                        font-size: 15px;
+                        width: 90%;
                         margin-top: 1rem;
                     }
 
-                    .article__author {
+                    .section__author {
                         display: flex;
                         flex-direction: row;
-                        margin-top: 1rem;
-                        max-width: 40vw;
+                        align-items: center;
+                        margin-top: 2rem;
 
-                        .article__photo {
-                            width: 50px;
-                            height: 50px;
-                            background-color: $light-green;
+                        .section__photo {
+                            width: 6vw;
+                            height: 6vw;
                             border-radius: 100px;
+                            background-color: $light-green;
                         }
 
-                        .article__data {
+                        .section__data {
+                            display: flex;
+                            flex-direction: column;
                             margin-left: 1rem;
-                            width: 100vw;
 
-                            .article__name {
-                                font-size: 16px;
-                            }
-
-                            .article__read-time {
-                                font-size: 14px;
+                            .section__read-time {
+                                color: $light-green;
                             }
                         }
                     }
