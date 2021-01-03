@@ -7,13 +7,14 @@ fetch(api).then(
 ).then(
     function(json) {
         jsondata = json;
+        console.log(jsondata);
         loadSection();
     }
 )
 
 
 function loadSection() {
-    for (i = 0; i <= jsondata.length; i++) {
+    for (i = 0; i < jsondata.length; i++) {
         const section = document.querySelector('.section');
         const box = document.createElement('div');
         const contentBox = document.createElement('div');
@@ -54,14 +55,14 @@ function loadSection() {
         sectionData.appendChild(sectionName);
         sectionData.appendChild(sectionReadTime);
 
-        sectionTitle.textContent = jsondata[0].title;
-        sectionParagraph.textContent = jsondata[0].short;
+        sectionTitle.textContent = jsondata[i].title;
+        sectionParagraph.textContent = jsondata[i].short;
         sectionImage.src = './images/image.png';
+        sectionName.textContent = jsondata[i].author;
+        sectionReadTime.textContent = jsondata[i].time
 
-        const text = document.createElement('h1');
-        box.appendChild(text)
+
     }
-    console.log(jsondata);
 }
 
 
